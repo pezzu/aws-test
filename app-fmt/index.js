@@ -4,7 +4,7 @@ const express = require("express");
 const os = require("os");
 
 const APP_NAME = "FMT";
-const APP_PORT = process.env.FMT_PORT
+const APP_PORT = process.env.FMT_PORT;
 
 const app = express();
 
@@ -23,6 +23,12 @@ app.get("/server-info", (req, res) => {
 app.get("/ping", (req, res) => {
   res.json({
     status: "OK",
+  });
+});
+
+app.get("/format", (req, res) => {
+  res.json({
+    format: "formatted report",
   });
 });
 
