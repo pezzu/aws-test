@@ -4,7 +4,7 @@ const express = require("express");
 const os = require("os");
 
 const APP_NAME = "FMT";
-const APP_PORT = process.argv[2] || process.env.FMT_PORT;
+const APP_PORT = process.argv[2] || process.env.FMT_PORT || 80;
 
 const app = express();
 
