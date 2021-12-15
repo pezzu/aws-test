@@ -5,7 +5,7 @@ const os = require("os");
 const axios = require("axios");
 
 const APP_NAME = "RPT";
-const APP_PORT = process.env.RPT_PORT;
+const APP_PORT = process.argv[2] || process.env.RPT_PORT;
 
 const SCC_URL = process.env.SCC_URL;
 const FMT_PORT = process.env.FMT_PORT;

@@ -8,7 +8,7 @@ const APP_NAME = "URF";
 const APP_PORT = process.env.URF_PORT;
 
 const SCC_URL = process.env.SCC_URL;
-const RPT_PORT = process.env.RPT_PORT;
+const RPT_PORT = process.argv[2] || process.env.RPT_PORT;
 
 const app = express();
 
