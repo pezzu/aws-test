@@ -33,7 +33,7 @@ app.get("/ping", (req, res) => {
 app.get("/print", async (req, res) => {
   const formatted = await axios.get(`${SCC_URL}:${FMT_PORT}/format`);
   res.json({
-    report: "Report from RPT server",
+    report: `Generated report from ${os.hostname()}`,
     format: formatted.data,
   });
 });

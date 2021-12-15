@@ -28,7 +28,7 @@ app.get("/ping", (req, res) => {
 
 app.get("/format", (req, res) => {
   res.json({
-    format: "formatted report",
+    format: `Formatted report from ${os.hostname()}`,
   });
 });
 

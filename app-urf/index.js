@@ -33,7 +33,7 @@ app.get("/ping", (req, res) => {
 app.get("/requsition", async (req, res) => {
   const report = await axios.get(`${SCC_URL}:${RPT_PORT}/print`);
   res.json({
-    requsition: "Print requsition",
+    requsition: `Print requsition from ${os.hostname()}`,
     report: report.data,
   });
 });
